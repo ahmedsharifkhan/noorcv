@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ .Site.Data.cv.name }} | CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWix+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8A8N5VYy1nLh7+8v0vG2fR2D8w3e5wA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{{ "css/cv.css" | relURL }}" />
+</head>
+<body>
+  {{ $cv := .Site.Data.cv }}
+  <main class="cv-wrapper">
+    <section class="hero-card">
+      <img class="profile-photo" src="{{ $cv.photo }}" alt="{{ $cv.name }} profile photo" />
+      <div class="hero-content">
+        <h1>{{ $cv.name }}</h1>
+        <p class="role">{{ $cv.role }}</p>
+        <h2>Career Objective</h2>
+        <p>{{ $cv.summary }}</p>
+        <a class="download-btn" href="{{ $cv.resume_file | relURL }}" download>
+          <i class="fas fa-download"></i>
+          Download Resume
+        </a>
+      </div>
+    </section>
+
+    <section class="content-grid">
+      <aside class="left-column panel">
+        <div class="section-block">
+          <h3><i class="fas fa-address-book"></i> Contact</h3>
+          <p><i class="fas fa-phone"></i> {{ $cv.phone }}</p>
+          <p><i class="fas fa-envelope"></i> {{ $cv.email }}</p>
+          <p><i class="fas fa-location-dot"></i> {{ $cv.location }}</p>
+          <div class="social-row">
+            {{ range $cv.social_links }}
+              <a href="{{ .url }}" aria-label="{{ .name }}"><i class="{{ .icon }}"></i></a>
+            {{ end }}
+          </div>
+        </div>
+
+        <div class="section-block">
+          <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+          {{ range $cv.education }}
+            <article class="timeline-item">
+              <p class="year">{{ .year }}</p>
+              <h4>{{ .institute }}</h4>
+              <p>{{ .degree }}</p>
+              <p>{{ .result }}</p>
+            </article>
+          {{ end }}
+        </div>
+
+        <div class="section-block">
+          <h3><i class="fas fa-screwdriver-wrench"></i> Skills</h3>
+          <ul>
+            {{ range $cv.skills }}
+              <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </div>
+
+        <div class="section-block">
+          <h3><i class="fas fa-language"></i> Language</h3>
+          <ul>
+            {{ range $cv.languages }}
+              <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </div>
+
+        <div class="section-block">
+          <h3><i class="fas fa-heart"></i> Interests</h3>
+          <ul>
+            {{ range $cv.interests }}
+              <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </div>
+      </aside>
+
+      <section class="right-column panel">
+        <div class="section-block">
+          <h3><i class="fas fa-briefcase"></i> Experience</h3>
+          {{ range $cv.experience }}
+            <article class="experience-item">
+              <h4>{{ .title }}</h4>
+              <p class="company">{{ .company }}</p>
+              <p class="year">{{ .period }}</p>
+              <ul>
+                {{ range .details }}
+                  <li>{{ . }}</li>
+                {{ end }}
+              </ul>
+            </article>
+          {{ end }}
+        </div>
+
+        <div class="section-block">
+          <h3><i class="fas fa-rocket"></i> Projects</h3>
+          {{ range $cv.projects }}
+            <article class="experience-item compact">
+              <h4>{{ .title }}</h4>
+              <p>{{ .description }}</p>
+            </article>
+          {{ end }}
+        </div>
+
+        <div class="section-block">
+          <h3><i class="fas fa-certificate"></i> Courses</h3>
+          <ul>
+            {{ range $cv.courses }}
+              <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </div>
+
+        <div class="section-block">
+          <h3><i class="fas fa-trophy"></i> Achievements</h3>
+          <ul>
+            {{ range $cv.achievements }}
+              <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </div>
+
+        <div class="section-block">
+          <h3><i class="fas fa-user-group"></i> References</h3>
+          <div class="ref-grid">
+            {{ range $cv.references }}
+              <article class="reference-card">
+                <h4>{{ .name }}</h4>
+                <p>{{ .role }}</p>
+                <p>{{ .company }}</p>
+                <p><i class="fas fa-phone"></i> {{ .phone }}</p>
+                <p><i class="fas fa-envelope"></i> {{ .email }}</p>
+              </article>
+            {{ end }}
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
