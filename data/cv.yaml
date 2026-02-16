@@ -1,0 +1,84 @@
+name: Ahmed Sharif Khan
+role: Digital Marketing Specialist & Media Buying
+location: Mirpur, Dhaka
+phone: "+88 01744750096"
+email: ahmedsharifkhanoor@gmail.com
+photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80"
+summary: "I am a highly motivated and results-driven digital marketing professional with extensive experience in Meta paid campaigns, budget optimization, and audience strategy. I build full-funnel campaign structures that improve ROI and sustainable business growth."
+resume_file: /resume/ahmed-sharif-khan-resume.pdf
+social_links:
+  - name: Facebook
+    icon: fab fa-facebook-f
+    url: "#"
+  - name: LinkedIn
+    icon: fab fa-linkedin-in
+    url: "#"
+  - name: Portfolio
+    icon: fas fa-globe
+    url: "#"
+skills:
+  - Meta Ads (FB + IG)
+  - Google Ads Search & Display
+  - YouTube Ads
+  - Funnel Strategy (TOFU, MOFU, BOFU)
+  - CRO & A/B Testing
+  - Pixel, CAPI, GTM Setup
+  - Retargeting & Lookalike Audience
+  - Report Automation (Looker Studio)
+languages:
+  - English (Professional)
+  - Bangla (Native)
+interests:
+  - Artificial Intelligence
+  - Data Science
+  - Photography
+  - Cloud Computing
+education:
+  - degree: BBA in Business Administration
+    institute: EXIM Bank Agricultural University Bangladesh
+    year: "2020"
+    result: "CGPA 3.23/4"
+  - degree: Higher Secondary Certificate (Business Studies)
+    institute: Nawabganj Govt. College
+    year: "2016"
+    result: "GPA 4.67/5"
+experience:
+  - title: Digital Marketing Specialist
+    company: Business Globalizer
+    period: "2024 - Present"
+    details:
+      - Developed and optimized ad funnels to scale qualified leads.
+      - Managed monthly media budgets across Meta and Google.
+      - Collaborated with design and content teams for ad creatives.
+      - Increased campaign ROAS with data-led optimization.
+  - title: Project Manager (Digital Marketing)
+    company: Ecomchips
+    period: "2022 - 2023"
+    details:
+      - Built and executed growth strategies for eCommerce clients.
+      - Led cross-functional teams and improved campaign delivery.
+      - Planned and launched social & search ad campaigns.
+projects:
+  - title: Remote Digital Marketing Support
+    description: Supported 20+ global brands with paid media planning and execution.
+  - title: Campaign Optimization Program
+    description: Reduced acquisition cost by over 30% through structured testing.
+courses:
+  - Meta Ads Masterclass
+  - Google Digital Marketing & E-commerce Certificate
+  - Digital Marketing Associate by Facebook
+achievements:
+  - Facilitated 1000+ international company setups.
+  - Generated 600%+ ROAS in niche eCommerce campaigns.
+  - Built reusable reporting systems to speed up decision making.
+references:
+  - name: MD J. Naem
+    role: Executive Head of Brand and Promotion
+    company: Business Globalizer
+    phone: "01956656095"
+    email: naem@businessglobalizer.net
+  - name: Abdullah Al Mamun Tonmoy
+    role: Sr. Executive of Digital Marketing
+    company: Cosmic Bags
+    phone: "01710720118"
+    email: aamptonmoy@outlook.com
